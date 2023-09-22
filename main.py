@@ -8,24 +8,24 @@ alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n'
 def caesar(plain_text, shift_amount, direction):
     if direction == "encode":
         cipher_text = ""
-        for letter in plain_text:
-            if letter in alphabet:
-                position = alphabet.index(letter)
+        for char in plain_text:
+            if char in alphabet:
+                position = alphabet.index(char)
                 new_position = position + shift_amount
                 cipher_text += alphabet[new_position]
             else:
-                cipher_text += letter
+                cipher_text += char
         print(f"The encoded text is {cipher_text}")
 
     elif direction == "decode":
         decoded_text = ""
-        for letter in plain_text:
-            if letter in alphabet:
-                position = alphabet.index(letter)
+        for char in plain_text:
+            if char in alphabet:
+                position = alphabet.index(char)
                 new_position = position - shift_amount
                 decoded_text += alphabet[new_position]
             else:
-                decoded_text += letter
+                decoded_text += char
         print(f"The decoded text is {decoded_text}")
 
 
